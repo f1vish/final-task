@@ -1,7 +1,12 @@
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   color: #1e4620;
   background-color: #f5efeb;
+  font-weight: 300;
+}
+
+strong {
+  font-weight: 700;
 }
 
 .container {
@@ -32,7 +37,6 @@ body {
 
 .site-logo-2 {
   font-size: 14px;
-  font-weight: 400;
 }
 
 .nav-list {
@@ -46,13 +50,12 @@ body {
   display: inline-block;
   padding-left: 8px;
   font-size: 14px;
-  font-weight: 400;
   text-decoration: none;
   color: inherit;
 }
 
 .first-link::before {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   top: 50%;
@@ -62,12 +65,111 @@ body {
   background-color: #869444;
 }
 
-.nav-link-active {
-  font-weight: 500;
-}
-
 .burger-btn {
   display: none;
+}
+
+.ana-zeferino {
+  position: relative;
+  background-color: #c7e1b0;
+  overflow: hidden;
+}
+
+.ana-zeferino::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 450px;
+  height: 450px;
+  background-image: url("../img/leaf.svg");
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  background-size: contain;
+  pointer-events: none;
+}
+
+.ana-container {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  min-height: 460px;
+}
+
+.ana-content {
+  padding-left: 90px;
+}
+
+.ana-title {
+  margin: 0;
+  font-family: "Fraunces", sans-serif;
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 1.02;
+  color: #1e4620;
+}
+
+.ana-title-line {
+  display: block;
+}
+
+.ana-subtitle {
+  margin-top: 12px;
+  font-size: 16px;
+  font-weight: 300;
+  color: #1e4620;
+}
+
+.ana-socials {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 22px;
+}
+
+.ana-social-link {
+  display: block;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+}
+
+.ana-icon-1 {
+  background-image: url("../img/icon-1.svg");
+}
+
+.ana-icon-2 {
+  background-image: url("../img/icon-2.svg");
+}
+
+.ana-icon-3 {
+  background-image: url("../img/icon-3.svg");
+}
+
+.ana-icon-4 {
+  background-image: url("../img/icon-4.svg");
+}
+
+.ana-icon-5 {
+  background-image: url("../img/icon-5.svg");
+}
+
+.ana-photo-box {
+  align-self: flex-end;
+  flex-shrink: 0;
+}
+
+.ana-photo {
+  display: block;
+  max-height: 440px;
+  width: auto;
+  object-fit: contain;
 }
 
 @media (max-width: 767px) {
@@ -103,5 +205,50 @@ body {
     background-size: contain;
     border: none;
     cursor: pointer;
+  }
+
+  .ana-zeferino::before {
+    display: none;
+  }
+
+  .ana-container {
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    min-height: 240px;
+  }
+
+  .ana-content {
+    padding-left: 0;
+  }
+
+  .ana-title {
+    font-size: 32px;
+    line-height: 1.05;
+  }
+
+  .ana-subtitle {
+    margin-top: 6px;
+    font-size: 11px;
+  }
+
+  .ana-socials {
+    gap: 6px;
+    margin-top: 12px;
+  }
+
+  .ana-social-link {
+    width: 18px;
+    height: 18px;
+    background-size: 100%;
+  }
+
+  .ana-photo-box {
+    align-self: flex-end;
+    flex-shrink: 1;
+  }
+
+  .ana-photo {
+    max-height: 220px;
   }
 }
