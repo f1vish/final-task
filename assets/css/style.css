@@ -172,6 +172,182 @@ strong {
   object-fit: contain;
 }
 
+.servicos {
+  padding: 64px 0;
+  background-color: #f5efeb;
+}
+
+.servicos-title {
+  margin: 0 0 32px;
+  font-family: "Fraunces", sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.1;
+  color: #1e4620;
+}
+
+.servicos-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.servicos-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 36px 32px;
+  background-color: #2b5434;
+  color: #ffffff;
+}
+
+.servicos-card-wide {
+  grid-column: span 2;
+}
+
+.servicos-card-body {
+  margin-bottom: 24px;
+}
+
+.servicos-card-body-wide {
+  max-width: 680px;
+}
+
+.servicos-card-title {
+  margin: 0 0 18px;
+  font-family: "Fraunces", sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.15;
+  color: #ffffff;
+}
+
+.servicos-card-title-line {
+  display: block;
+}
+
+.servicos-card-title-wide {
+  margin-bottom: 6px;
+}
+
+.servicos-card-note {
+  margin: 0 0 16px;
+  font-size: 12px;
+  font-weight: 400;
+  color: #d2ded4;
+}
+
+.servicos-card-text {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 1.55;
+  color: #d5e0d6;
+}
+
+.servicos-card-text-bold {
+  margin-top: 10px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.servicos-card-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.servicos-card-actions-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.servicos-accordion {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 46px;
+  padding: 10px 16px;
+  background-color: #b4c185;
+  color: #1e4620;
+  border: none;
+  border-radius: 3px;
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.25;
+  text-align: left;
+  cursor: pointer;
+}
+
+.servicos-chevron {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin-left: 12px;
+  flex-shrink: 0;
+  background-image: url("../img/arrow.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.servicos-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 12px 18px;
+  border: none;
+  border-radius: 3px;
+  font-family: "Poppins", sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.4px;
+  cursor: pointer;
+}
+
+.servicos-btn-primary {
+  background-color: #d83815;
+  color: #ffffff;
+}
+
+.servicos-btn-portfolio {
+  min-height: 36px;
+  padding: 8px 12px;
+  background-color: transparent;
+  color: #e3eae4;
+  font-size: 10.5px;
+}
+
+.servicos-check-icon {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+  background-image: url("../img/check.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.servicos-be-icon {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  background-image: url("../img/be.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
 @media (max-width: 767px) {
   .container {
     padding: 0 24px;
@@ -250,5 +426,36 @@ strong {
 
   .ana-photo {
     max-height: 220px;
+  }
+
+  .servicos {
+    padding: 40px 0;
+  }
+
+  .servicos-title {
+    margin-bottom: 24px;
+    font-size: 32px;
+  }
+
+  .servicos-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .servicos-card-wide {
+    grid-column: span 1;
+  }
+
+  .servicos-card {
+    padding: 28px 20px;
+  }
+
+  .servicos-card-title {
+    font-size: 24px;
+  }
+
+  .servicos-card-actions-row {
+    grid-template-columns: 1fr;
+    gap: 12px;
   }
 }
