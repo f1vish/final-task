@@ -348,6 +348,85 @@ strong {
   background-size: contain;
 }
 
+.indico {
+  padding: 64px 0;
+  background-color: #b7c582;
+}
+
+.indico-title {
+  margin: 0 0 36px;
+  font-family: "Fraunces", sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.1;
+  color: #1e4620;
+}
+
+.indico-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 56px;
+  row-gap: 32px;
+}
+
+.indico-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.indico-box {
+  flex-shrink: 0;
+  width: 108px;
+  height: 108px;
+  background-color: #e6e6e6;
+  border: 1px solid #1e241e;
+}
+
+.indico-card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.indico-card-desc {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.35;
+  color: #172618;
+}
+
+.indico-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 9px 18px;
+  background-color: #d83815;
+  color: #ffffff;
+  border: 1px solid #1e241e;
+  border-radius: 2px;
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.indico-btn-icon {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  background-image: url("../img/cursor.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
 @media (max-width: 767px) {
   .container {
     padding: 0 24px;
@@ -457,5 +536,36 @@ strong {
   .servicos-card-actions-row {
     grid-template-columns: 1fr;
     gap: 12px;
+  }
+  .indico {
+    padding: 44px 0;
+  }
+
+  .indico-title {
+    margin-bottom: 24px;
+    font-size: 32px;
+  }
+
+  .indico-grid {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .indico-card {
+    gap: 14px;
+  }
+
+  .indico-box {
+    width: 84px;
+    height: 84px;
+  }
+
+  .indico-card-desc {
+    font-size: 13px;
+  }
+
+  .indico-btn {
+    padding: 8px 14px;
+    font-size: 11px;
   }
 }
