@@ -427,6 +427,69 @@ strong {
   background-size: contain;
 }
 
+.pessoas {
+  padding: 72px 0 64px;
+  background-color: #f5efeb;
+}
+
+.pessoas-header {
+  text-align: center;
+  margin-bottom: 44px;
+}
+
+.pessoas-title {
+  margin: 0;
+  font-family: "Fraunces", sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.08;
+  color: #1e4620;
+}
+
+.pessoas-title-line {
+  display: block;
+}
+
+.pessoas-subtitle {
+  margin: 8px 0 0;
+  font-size: 13px;
+  font-weight: 300;
+  color: #5a6d5b;
+}
+
+.pessoas-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 44px;
+  row-gap: 32px;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.pessoas-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 108px;
+  text-align: center;
+}
+
+.pessoas-avatar {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  background-color: #c7c7c7;
+  margin-bottom: 10px;
+}
+
+.pessoas-name {
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 1.25;
+  color: #1e4620;
+}
+
 @media (max-width: 767px) {
   .container {
     padding: 0 24px;
@@ -567,5 +630,37 @@ strong {
   .indico-btn {
     padding: 8px 14px;
     font-size: 11px;
+  }
+
+  .pessoas {
+    padding: 48px 0 40px;
+  }
+
+  .pessoas-header {
+    margin-bottom: 28px;
+  }
+
+  .pessoas-title {
+    font-size: 32px;
+  }
+
+  .pessoas-list {
+    column-gap: 16px;
+    row-gap: 22px;
+    max-width: 320px;
+  }
+
+  .pessoas-item {
+    width: 84px;
+  }
+
+  .pessoas-avatar {
+    width: 68px;
+    height: 68px;
+    margin-bottom: 8px;
+  }
+
+  .pessoas-name {
+    font-size: 10px;
   }
 }
