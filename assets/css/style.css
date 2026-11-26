@@ -546,6 +546,96 @@ strong {
   object-fit: cover;
 }
 
+.depoimentos {
+  position: relative;
+  padding: 72px 0 64px;
+  background-color: #c7e1b0;
+  font-family: "Poppins", sans-serif;
+  color: #1e4620;
+}
+
+.depoimentos::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 240px;
+  height: 290px;
+  background-image: url("../img/leaf-2.svg");
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-size: contain;
+  pointer-events: none;
+}
+
+.depoimentos-container {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 56px;
+}
+
+.depoimentos-container::before {
+  content: "";
+  position: absolute;
+  left: 90px;
+  top: -92px;
+  width: 68px;
+  height: 46px;
+  background-image: url("../img/quote.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  pointer-events: none;
+}
+
+.depoimentos-body {
+  max-width: 610px;
+}
+
+.depoimentos-text {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 1.55;
+  color: #1e4620;
+}
+
+.depoimentos-text + .depoimentos-text {
+  margin-top: 14px;
+}
+
+.depoimentos-author {
+  margin: 24px 0 0;
+  font-size: 13px;
+  font-weight: 700;
+  text-align: right;
+  color: #1e4620;
+}
+
+.depoimentos-arrow {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  border: none;
+  cursor: pointer;
+}
+
+.depoimentos-arrow-prev {
+  background-image: url("../img/arrow-left.svg");
+}
+
+.depoimentos-arrow-next {
+  background-image: url("../img/arrow-right.svg");
+}
+
 @media (max-width: 767px) {
   .container {
     padding: 0 24px;
@@ -753,5 +843,47 @@ strong {
 
   .sobre-text + .sobre-text {
     margin-top: 14px;
+  }
+
+  .depoimentos {
+    padding: 40px 0 36px;
+  }
+
+  .depoimentos::after {
+    display: none;
+  }
+
+  .depoimentos-container {
+    gap: 12px;
+  }
+
+  .depoimentos-container::before {
+    left: 24px;
+    top: -52px;
+    width: 34px;
+    height: 24px;
+  }
+
+  .depoimentos-body {
+    max-width: 100%;
+  }
+
+  .depoimentos-text {
+    font-size: 11px;
+    line-height: 1.5;
+  }
+
+  .depoimentos-text + .depoimentos-text {
+    margin-top: 12px;
+  }
+
+  .depoimentos-author {
+    margin-top: 18px;
+    font-size: 11px;
+  }
+
+  .depoimentos-arrow {
+    width: 16px;
+    height: 16px;
   }
 }
