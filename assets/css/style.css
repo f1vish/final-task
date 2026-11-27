@@ -63,9 +63,9 @@ strong {
   position: absolute;
   left: 0;
   top: 50%;
-  transform: translateY(-50%);
   width: 2px;
   height: 13px;
+  transform: translateY(-50%);
   background-color: #869444;
 }
 
@@ -75,8 +75,8 @@ strong {
 
 .introducao {
   position: relative;
-  background-color: #c7e1b0;
   overflow: hidden;
+  background-color: #c7e1b0;
 }
 
 .introducao::before {
@@ -86,10 +86,7 @@ strong {
   bottom: -10px;
   width: 450px;
   height: 450px;
-  background-image: url("../img/leaf.svg");
-  background-repeat: no-repeat;
-  background-position: left bottom;
-  background-size: contain;
+  background: url("../img/leaf.svg") no-repeat left bottom / contain;
   pointer-events: none;
 }
 
@@ -116,15 +113,16 @@ strong {
   color: #1e4620;
 }
 
-.introducao-title-line {
+.introducao-title-line,
+.servicos-card-title-line,
+.empresas-title-line,
+.sobre-title-line {
   display: block;
 }
 
 .introducao-subtitle {
   margin-top: 12px;
   font-size: 16px;
-  font-weight: 300;
-  color: #1e4620;
 }
 
 .introducao-socials {
@@ -171,31 +169,35 @@ strong {
 
 .introducao-photo {
   display: block;
-  max-height: 440px;
   width: auto;
+  max-height: 440px;
   object-fit: contain;
 }
 
 .servicos {
   padding: 64px 0;
-  background-color: #f5efeb;
   overflow-x: clip;
+  background-color: #f5efeb;
+}
+
+.servicos-container,
+.footer-container {
+  max-width: 860px;
 }
 
 .servicos-container {
-  max-width: 860px;
-  margin: 0 auto;
   padding: 0 20px;
   box-sizing: border-box;
 }
 
-.servicos-title {
+.servicos-title,
+.indico-title,
+.empresas-title {
   margin: 0 0 28px;
   font-family: "Fraunces", serif;
   font-size: 40px;
   font-weight: 700;
   line-height: 1.1;
-  letter-spacing: -0.02em;
   color: #1e4620;
 }
 
@@ -225,8 +227,8 @@ strong {
 }
 
 .servicos-card-body {
-  margin-bottom: 28px;
   min-width: 0;
+  margin-bottom: 28px;
 }
 
 .servicos-card-body-wide {
@@ -245,8 +247,8 @@ strong {
   overflow-wrap: break-word;
 }
 
-.servicos-card-title-line {
-  display: block;
+.servicos-card-title-capitalize {
+  text-transform: capitalize;
 }
 
 .servicos-card-title-wide {
@@ -275,13 +277,12 @@ strong {
 .servicos-card-text-bold {
   margin-top: 12px;
   font-weight: 700;
-  color: #c7e1b0;
 }
 
 .servicos-card-actions {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: stretch;
   gap: 12px;
   width: 100%;
   min-width: 0;
@@ -299,7 +300,6 @@ strong {
   background-color: #b4c185;
   color: #1e4620;
   border: 1px solid #e6ece2;
-  border-radius: 0;
   font-family: "Poppins", sans-serif;
   font-size: 13px;
   font-weight: 700;
@@ -316,26 +316,24 @@ strong {
 
 .servicos-chevron {
   display: inline-block;
+  flex-shrink: 0;
   width: 14px;
   height: 14px;
   margin-left: 12px;
-  flex-shrink: 0;
-  background-image: url("../img/arrow.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
+  background: url("../img/arrow.svg") no-repeat center / contain;
 }
 
 .servicos-btn {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
+  width: 100%;
   max-width: 100%;
   min-width: 0;
   min-height: 52px;
   padding: 12px 18px;
-  border-radius: 0;
+  border: 1px solid transparent;
   font-family: "Poppins", sans-serif;
   font-size: 12px;
   font-weight: 700;
@@ -353,39 +351,32 @@ strong {
 }
 
 .servicos-btn-primary {
-  width: 270px;
-  max-width: 100%;
   background-color: #d83815;
   color: #ffffff;
-  border: 1px solid #1b241d;
+  border-color: #1b241d;
 }
 
 .servicos-btn-portfolio {
-  width: 270px;
-  max-width: 100%;
-  min-height: 52px;
   padding: 8px 14px;
   background-color: transparent;
   color: #e8efe9;
-  border: 1px solid #d83815;
+  border-color: #d83815;
   font-size: 11px;
 }
 
 .servicos-check-icon {
   display: inline-block;
+  flex-shrink: 0;
   width: 15px;
   height: 15px;
-  flex-shrink: 0;
-  background-image: url("../img/check.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
+  background: url("../img/check.svg") no-repeat center / contain;
 }
 
 .servicos-be-icon {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
   width: 22px;
   height: 22px;
   border-radius: 50%;
@@ -394,18 +385,17 @@ strong {
   font-family: "Poppins", sans-serif;
   font-size: 10px;
   font-weight: 800;
-  font-style: normal;
   line-height: 1;
-  text-transform: none;
   letter-spacing: -0.5px;
-  flex-shrink: 0;
+  text-transform: none;
 }
 
 .servicos-card-actions-row {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 32px;
   align-items: stretch;
+  gap: 32px;
+  width: 100%;
   min-width: 0;
 }
 
@@ -417,16 +407,11 @@ strong {
 
 .indico {
   padding: 64px 0;
-  background-color: #b7c582;
+  background-color: #adbd71;
 }
 
 .indico-title {
-  margin: 0 0 36px;
-  font-family: "Fraunces", sans-serif;
-  font-size: 40px;
-  font-weight: 700;
-  line-height: 1.1;
-  color: #1e4620;
+  margin-bottom: 36px;
 }
 
 .indico-grid {
@@ -488,10 +473,7 @@ strong {
   display: inline-block;
   width: 14px;
   height: 14px;
-  background-image: url("../img/cursor.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
+  background: url("../img/cursor.svg") no-repeat center / contain;
 }
 
 .empresas {
@@ -500,28 +482,19 @@ strong {
 }
 
 .empresas-header {
-  text-align: center;
   margin-bottom: 44px;
+  text-align: center;
 }
 
 .empresas-title {
   margin: 0;
-  font-family: "Fraunces", sans-serif;
-  font-size: 40px;
-  font-weight: 700;
   line-height: 1.08;
-  color: #1e4620;
-}
-
-.empresas-title-line {
-  display: block;
 }
 
 .empresas-subtitle {
   margin: 8px 0 0;
   font-size: 13px;
   font-weight: 300;
-  color: #5a6d5b;
 }
 
 .empresas-list {
@@ -545,9 +518,9 @@ strong {
 .empresas-avatar {
   width: 96px;
   height: 96px;
+  margin-bottom: 10px;
   border-radius: 50%;
   background-color: #c7c7c7;
-  margin-bottom: 10px;
 }
 
 .empresas-name {
@@ -559,7 +532,6 @@ strong {
 
 .sobre {
   background: linear-gradient(to bottom, transparent 60px, #2b5434 60px);
-  font-family: "Poppins", sans-serif;
   color: #ffffff;
 }
 
@@ -577,24 +549,18 @@ strong {
 
 .sobre-title {
   margin: 0 0 24px;
-  font-family: "Poppins", sans-serif;
   font-size: 46px;
   font-weight: 700;
   line-height: 1.05;
-  color: #ffffff;
-}
-
-.sobre-title-line {
-  display: block;
+  color: white;
 }
 
 .sobre-text {
   margin: 0;
-  font-family: "Poppins", sans-serif;
   font-size: 14px;
   font-weight: 300;
   line-height: 1.65;
-  color: #ffffff;
+  color: #c7e1b0;
 }
 
 .sobre-text + .sobre-text {
@@ -617,7 +583,6 @@ strong {
   position: relative;
   padding: 72px 0 64px;
   background-color: #c7e1b0;
-  font-family: "Poppins", sans-serif;
   color: #1e4620;
 }
 
@@ -628,10 +593,7 @@ strong {
   bottom: 0;
   width: 240px;
   height: 290px;
-  background-image: url("../img/leaf-2.svg");
-  background-repeat: no-repeat;
-  background-position: right bottom;
-  background-size: contain;
+  background: url("../img/leaf-2.svg") no-repeat right bottom / contain;
   pointer-events: none;
 }
 
@@ -651,10 +613,7 @@ strong {
   top: -92px;
   width: 68px;
   height: 46px;
-  background-image: url("../img/quote.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
+  background: url("../img/quote.svg") no-repeat center / contain;
   pointer-events: none;
 }
 
@@ -706,12 +665,7 @@ strong {
 .footer {
   padding: 40px 0 32px;
   background-color: #f5efeb;
-  font-family: "Poppins", sans-serif;
   color: #1e4620;
-}
-
-.footer-container {
-  max-width: 860px;
 }
 
 .footer-top {
@@ -750,19 +704,19 @@ strong {
 }
 
 .footer-icon-2 {
-  background-image: url(../img/icon-7.svg);
+  background-image: url("../img/icon-7.svg");
 }
 
 .footer-icon-3 {
-  background-image: url(../img/icon-8.svg);
+  background-image: url("../img/icon-8.svg");
 }
 
 .footer-icon-4 {
-  background-image: url(../img/icon-9.svg);
+  background-image: url("../img/icon-9.svg");
 }
 
 .footer-icon-5 {
-  background-image: url(../img/icon-10.svg);
+  background-image: url("../img/icon-10.svg");
 }
 
 .footer-copy {
@@ -776,17 +730,20 @@ strong {
 @media (max-width: 767px) {
   .container {
     padding: 0 24px;
+    box-sizing: border-box;
   }
 
   .header-container {
     min-height: 78px;
   }
 
-  .site-logo-1 {
+  .site-logo-1,
+  .footer-logo .site-logo-1 {
     font-size: 15px;
   }
 
-  .site-logo-2 {
+  .site-logo-2,
+  .footer-logo .site-logo-2 {
     font-size: 13px;
   }
 
@@ -799,11 +756,7 @@ strong {
     width: 22px;
     height: 22px;
     padding: 0;
-    background-color: transparent;
-    background-image: url(../img/burger-menu.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
+    background: url("../img/burger-menu.svg") no-repeat center / contain;
     border: none;
     cursor: pointer;
   }
@@ -841,7 +794,6 @@ strong {
   .introducao-social-link {
     width: 18px;
     height: 18px;
-    background-size: 100%;
   }
 
   .introducao-photo-box {
@@ -861,22 +813,30 @@ strong {
   .servicos-container {
     width: 100%;
     max-width: 100%;
+    margin: 0 auto;
     padding: 0 16px;
     box-sizing: border-box;
   }
 
+  .servicos-title,
+  .indico-title,
+  .empresas-title {
+    font-size: 32px;
+  }
+
   .servicos-title {
     margin-bottom: 24px;
-    font-size: 32px;
   }
 
   .servicos-grid {
     grid-template-columns: minmax(0, 1fr);
     gap: 18px;
-    min-width: 0;
+    width: 100%;
   }
 
-  .servicos-card {
+  .servicos-card,
+  .servicos-card-wide {
+    grid-column: auto;
     width: 100%;
     max-width: 100%;
     min-width: 0;
@@ -885,16 +845,9 @@ strong {
     box-sizing: border-box;
   }
 
-  .servicos-card-wide {
-    grid-column: span 1;
-    min-height: auto;
-    padding: 28px 20px;
-  }
-
   .servicos-card-body,
   .servicos-card-body-wide {
     max-width: 100%;
-    min-width: 0;
     margin-bottom: 24px;
   }
 
@@ -905,38 +858,34 @@ strong {
   }
 
   .servicos-card-actions {
-    width: 100%;
-    max-width: 100%;
-    min-width: 0;
-  }
-
-  .servicos-accordion {
-    width: 100%;
-    max-width: 100%;
-    min-width: 0;
-  }
-
-  .servicos-btn,
-  .servicos-btn-primary,
-  .servicos-btn-portfolio {
-    width: 100%;
-    max-width: 100%;
-    min-width: 0;
-  }
-
-  .servicos-card-actions-row {
-    grid-template-columns: minmax(0, 1fr);
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
     gap: 12px;
     width: 100%;
     max-width: 100%;
-    min-width: 0;
   }
 
+  .servicos-card-actions-row {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .servicos-accordion,
+  .servicos-btn,
+  .servicos-btn-primary,
+  .servicos-btn-portfolio,
   .servicos-card-actions-row .servicos-accordion,
   .servicos-card-actions-row .servicos-btn {
+    display: flex;
     width: 100%;
     max-width: 100%;
     min-width: 0;
+    box-sizing: border-box;
   }
 
   .indico {
@@ -945,7 +894,6 @@ strong {
 
   .indico-title {
     margin-bottom: 24px;
-    font-size: 32px;
   }
 
   .indico-grid {
@@ -960,153 +908,5 @@ strong {
   .indico-box {
     width: 84px;
     height: 84px;
-  }
-
-  .indico-card-desc {
-    font-size: 13px;
-  }
-
-  .indico-btn {
-    padding: 8px 14px;
-    font-size: 11px;
-  }
-
-  .empresas {
-    padding: 48px 0 40px;
-  }
-
-  .empresas-header {
-    margin-bottom: 28px;
-  }
-
-  .empresas-title {
-    font-size: 32px;
-  }
-
-  .empresas-list {
-    column-gap: 16px;
-    row-gap: 22px;
-    max-width: 320px;
-  }
-
-  .empresas-item {
-    width: 84px;
-  }
-
-  .empresas-avatar {
-    width: 68px;
-    height: 68px;
-    margin-bottom: 8px;
-  }
-
-  .empresas-name {
-    font-size: 10px;
-  }
-
-  .sobre {
-    background: linear-gradient(to bottom, transparent 48px, #2b5434 48px);
-  }
-
-  .sobre-container {
-    flex-direction: column-reverse;
-    align-items: flex-start;
-    gap: 28px;
-    padding-bottom: 48px;
-  }
-
-  .sobre-photo-box {
-    align-self: flex-end;
-    width: 175px;
-  }
-
-  .sobre-content {
-    max-width: 100%;
-    padding: 0;
-  }
-
-  .sobre-title {
-    margin-bottom: 16px;
-    font-size: 32px;
-  }
-
-  .sobre-text {
-    font-size: 13px;
-    line-height: 1.6;
-  }
-
-  .sobre-text + .sobre-text {
-    margin-top: 14px;
-  }
-
-  .depoimentos {
-    padding: 40px 0 36px;
-  }
-
-  .depoimentos::after {
-    display: none;
-  }
-
-  .depoimentos-container {
-    gap: 12px;
-  }
-
-  .depoimentos-container::before {
-    left: 24px;
-    top: -52px;
-    width: 34px;
-    height: 24px;
-  }
-
-  .depoimentos-body {
-    max-width: 100%;
-  }
-
-  .depoimentos-text {
-    font-size: 11px;
-    line-height: 1.5;
-  }
-
-  .depoimentos-text + .depoimentos-text {
-    margin-top: 12px;
-  }
-
-  .depoimentos-author {
-    margin-top: 18px;
-    font-size: 11px;
-  }
-
-  .depoimentos-arrow {
-    width: 16px;
-    height: 16px;
-  }
-
-  .footer {
-    padding: 36px 0 28px;
-  }
-
-  .footer-top {
-    gap: 16px;
-  }
-
-  .footer-logo .site-logo-1 {
-    font-size: 16px;
-  }
-
-  .footer-logo .site-logo-2 {
-    font-size: 14px;
-  }
-
-  .footer-socials {
-    gap: 8px;
-  }
-
-  .footer-social-link {
-    width: 28px;
-    height: 28px;
-  }
-
-  .footer-copy {
-    margin-top: 28px;
-    font-size: 10px;
   }
 }
