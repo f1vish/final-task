@@ -69,13 +69,13 @@ strong {
   display: none;
 }
 
-.ana-zeferino {
+.introducao {
   position: relative;
   background-color: #c7e1b0;
   overflow: hidden;
 }
 
-.ana-zeferino::before {
+.introducao::before {
   content: "";
   position: absolute;
   left: 0;
@@ -89,7 +89,7 @@ strong {
   pointer-events: none;
 }
 
-.ana-container {
+.introducao-container {
   position: relative;
   z-index: 1;
   display: flex;
@@ -99,11 +99,11 @@ strong {
   min-height: 460px;
 }
 
-.ana-content {
+.introducao-content {
   padding-left: 90px;
 }
 
-.ana-title {
+.introducao-title {
   margin: 0;
   font-family: "Fraunces", sans-serif;
   font-size: 64px;
@@ -112,25 +112,25 @@ strong {
   color: #1e4620;
 }
 
-.ana-title-line {
+.introducao-title-line {
   display: block;
 }
 
-.ana-subtitle {
+.introducao-subtitle {
   margin-top: 12px;
   font-size: 16px;
   font-weight: 300;
   color: #1e4620;
 }
 
-.ana-socials {
+.introducao-socials {
   display: flex;
   align-items: center;
   gap: 12px;
   margin-top: 22px;
 }
 
-.ana-social-link {
+.introducao-social-link {
   display: block;
   width: 26px;
   height: 26px;
@@ -140,32 +140,32 @@ strong {
   background-size: 100%;
 }
 
-.ana-icon-1 {
+.introducao-icon-1 {
   background-image: url("../img/icon-1.svg");
 }
 
-.ana-icon-2 {
+.introducao-icon-2 {
   background-image: url("../img/icon-2.svg");
 }
 
-.ana-icon-3 {
+.introducao-icon-3 {
   background-image: url("../img/icon-3.svg");
 }
 
-.ana-icon-4 {
+.introducao-icon-4 {
   background-image: url("../img/icon-4.svg");
 }
 
-.ana-icon-5 {
+.introducao-icon-5 {
   background-image: url("../img/icon-5.svg");
 }
 
-.ana-photo-box {
+.introducao-photo-box {
   align-self: flex-end;
   flex-shrink: 0;
 }
 
-.ana-photo {
+.introducao-photo {
   display: block;
   max-height: 440px;
   width: auto;
@@ -177,18 +177,24 @@ strong {
   background-color: #f5efeb;
 }
 
+.servicos-container {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
 .servicos-title {
-  margin: 0 0 32px;
-  font-family: "Fraunces", sans-serif;
+  margin: 0 0 28px;
+  font-family: "Fraunces", serif;
   font-size: 40px;
   font-weight: 700;
   line-height: 1.1;
+  letter-spacing: -0.02em;
   color: #1e4620;
 }
 
 .servicos-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 24px;
 }
 
@@ -196,29 +202,34 @@ strong {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 36px 32px;
+  min-height: 540px;
+  padding: 36px 34px 32px;
   background-color: #2b5434;
   color: #ffffff;
 }
 
 .servicos-card-wide {
   grid-column: span 2;
+  min-height: 310px;
+  padding: 44px 56px 40px;
 }
 
 .servicos-card-body {
-  margin-bottom: 24px;
+  margin-bottom: 28px;
 }
 
 .servicos-card-body-wide {
-  max-width: 680px;
+  max-width: 640px;
+  margin-bottom: 24px;
 }
 
 .servicos-card-title {
   margin: 0 0 18px;
-  font-family: "Fraunces", sans-serif;
-  font-size: 28px;
+  font-family: "Fraunces", serif;
+  font-size: 32px;
   font-weight: 700;
-  line-height: 1.15;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
   color: #ffffff;
 }
 
@@ -227,40 +238,38 @@ strong {
 }
 
 .servicos-card-title-wide {
+  max-width: 560px;
   margin-bottom: 6px;
+  font-size: 32px;
 }
 
 .servicos-card-note {
   margin: 0 0 16px;
   font-size: 12px;
   font-weight: 400;
+  line-height: 1.3;
   color: #d2ded4;
 }
 
 .servicos-card-text {
   margin: 0;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 300;
-  line-height: 1.55;
-  color: #d5e0d6;
+  line-height: 1.5;
+  color: #c7e1b0;
 }
 
 .servicos-card-text-bold {
-  margin-top: 10px;
+  margin-top: 12px;
   font-weight: 700;
-  color: #ffffff;
+  color: #c7e1b0;
 }
 
 .servicos-card-actions {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-}
-
-.servicos-card-actions-row {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 24px;
+  align-items: center;
+  gap: 12px;
 }
 
 .servicos-accordion {
@@ -268,14 +277,14 @@ strong {
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  min-height: 46px;
-  padding: 10px 16px;
+  min-height: 52px;
+  padding: 10px 18px;
   background-color: #b4c185;
   color: #1e4620;
-  border: none;
-  border-radius: 3px;
+  border: 1px solid #e6ece2;
+  border-radius: 0;
   font-family: "Poppins", sans-serif;
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 700;
   line-height: 1.25;
   text-align: left;
@@ -284,8 +293,8 @@ strong {
 
 .servicos-chevron {
   display: inline-block;
-  width: 12px;
-  height: 12px;
+  width: 14px;
+  height: 14px;
   margin-left: 12px;
   flex-shrink: 0;
   background-image: url("../img/arrow.svg");
@@ -298,38 +307,41 @@ strong {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
-  min-height: 44px;
+  gap: 10px;
+  min-height: 52px;
   padding: 12px 18px;
-  border: none;
-  border-radius: 3px;
+  border-radius: 0;
   font-family: "Poppins", sans-serif;
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 700;
-  line-height: 1;
+  line-height: 1.1;
   text-transform: uppercase;
   text-decoration: none;
-  letter-spacing: 0.4px;
+  letter-spacing: 0.3px;
   cursor: pointer;
 }
 
 .servicos-btn-primary {
+  width: 270px;
   background-color: #d83815;
   color: #ffffff;
+  border: 1px solid #1b241d;
 }
 
 .servicos-btn-portfolio {
-  min-height: 36px;
-  padding: 8px 12px;
+  width: 270px;
+  min-height: 52px;
+  padding: 8px 14px;
   background-color: transparent;
-  color: #e3eae4;
-  font-size: 10.5px;
+  color: #e8efe9;
+  border: 1px solid #d83815;
+  font-size: 11px;
 }
 
 .servicos-check-icon {
   display: inline-block;
-  width: 14px;
-  height: 14px;
+  width: 15px;
+  height: 15px;
   flex-shrink: 0;
   background-image: url("../img/check.svg");
   background-repeat: no-repeat;
@@ -338,14 +350,34 @@ strong {
 }
 
 .servicos-be-icon {
-  display: inline-block;
-  width: 16px;
-  height: 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background-color: #e8efe9;
+  color: #2b5434;
+  font-family: "Poppins", sans-serif;
+  font-size: 10px;
+  font-weight: 800;
+  font-style: normal;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: -0.5px;
   flex-shrink: 0;
-  background-image: url("../img/be.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
+}
+
+.servicos-card-actions-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 32px;
+  align-items: stretch;
+}
+
+.servicos-card-actions-row .servicos-accordion,
+.servicos-card-actions-row .servicos-btn {
+  width: 100%;
 }
 
 .indico {
@@ -427,17 +459,17 @@ strong {
   background-size: contain;
 }
 
-.pessoas {
+.empresas {
   padding: 72px 0 64px;
   background-color: #f5efeb;
 }
 
-.pessoas-header {
+.empresas-header {
   text-align: center;
   margin-bottom: 44px;
 }
 
-.pessoas-title {
+.empresas-title {
   margin: 0;
   font-family: "Fraunces", sans-serif;
   font-size: 40px;
@@ -446,18 +478,18 @@ strong {
   color: #1e4620;
 }
 
-.pessoas-title-line {
+.empresas-title-line {
   display: block;
 }
 
-.pessoas-subtitle {
+.empresas-subtitle {
   margin: 8px 0 0;
   font-size: 13px;
   font-weight: 300;
   color: #5a6d5b;
 }
 
-.pessoas-list {
+.empresas-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -467,7 +499,7 @@ strong {
   margin: 0 auto;
 }
 
-.pessoas-item {
+.empresas-item {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -475,7 +507,7 @@ strong {
   text-align: center;
 }
 
-.pessoas-avatar {
+.empresas-avatar {
   width: 96px;
   height: 96px;
   border-radius: 50%;
@@ -483,7 +515,7 @@ strong {
   margin-bottom: 10px;
 }
 
-.pessoas-name {
+.empresas-name {
   font-size: 11px;
   font-weight: 500;
   line-height: 1.25;
@@ -741,48 +773,48 @@ strong {
     cursor: pointer;
   }
 
-  .ana-zeferino::before {
+  .introducao::before {
     display: none;
   }
 
-  .ana-container {
+  .introducao-container {
     align-items: center;
     justify-content: center;
     gap: 18px;
     min-height: 240px;
   }
 
-  .ana-content {
+  .introducao-content {
     padding-left: 0;
   }
 
-  .ana-title {
+  .introducao-title {
     font-size: 32px;
     line-height: 1.05;
   }
 
-  .ana-subtitle {
+  .introducao-subtitle {
     margin-top: 6px;
     font-size: 11px;
   }
 
-  .ana-socials {
+  .introducao-socials {
     gap: 6px;
     margin-top: 12px;
   }
 
-  .ana-social-link {
+  .introducao-social-link {
     width: 18px;
     height: 18px;
     background-size: 100%;
   }
 
-  .ana-photo-box {
+  .introducao-photo-box {
     align-self: flex-end;
     flex-shrink: 1;
   }
 
-  .ana-photo {
+  .introducao-photo {
     max-height: 220px;
   }
 
@@ -816,6 +848,7 @@ strong {
     grid-template-columns: 1fr;
     gap: 12px;
   }
+
   .indico {
     padding: 44px 0;
   }
@@ -848,35 +881,35 @@ strong {
     font-size: 11px;
   }
 
-  .pessoas {
+  .empresas {
     padding: 48px 0 40px;
   }
 
-  .pessoas-header {
+  .empresas-header {
     margin-bottom: 28px;
   }
 
-  .pessoas-title {
+  .empresas-title {
     font-size: 32px;
   }
 
-  .pessoas-list {
+  .empresas-list {
     column-gap: 16px;
     row-gap: 22px;
     max-width: 320px;
   }
 
-  .pessoas-item {
+  .empresas-item {
     width: 84px;
   }
 
-  .pessoas-avatar {
+  .empresas-avatar {
     width: 68px;
     height: 68px;
     margin-bottom: 8px;
   }
 
-  .pessoas-name {
+  .empresas-name {
     font-size: 10px;
   }
 
