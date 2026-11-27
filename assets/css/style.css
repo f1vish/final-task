@@ -175,11 +175,14 @@ strong {
 .servicos {
   padding: 64px 0;
   background-color: #f5efeb;
+  overflow-x: clip;
 }
 
 .servicos-container {
   max-width: 860px;
   margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
 }
 
 .servicos-title {
@@ -196,16 +199,19 @@ strong {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 24px;
+  min-width: 0;
 }
 
 .servicos-card {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  min-width: 0;
   min-height: 540px;
   padding: 36px 34px 32px;
   background-color: #2b5434;
   color: #ffffff;
+  box-sizing: border-box;
 }
 
 .servicos-card-wide {
@@ -216,6 +222,7 @@ strong {
 
 .servicos-card-body {
   margin-bottom: 28px;
+  min-width: 0;
 }
 
 .servicos-card-body-wide {
@@ -231,6 +238,7 @@ strong {
   line-height: 1.05;
   letter-spacing: -0.02em;
   color: #ffffff;
+  overflow-wrap: break-word;
 }
 
 .servicos-card-title-line {
@@ -257,6 +265,7 @@ strong {
   font-weight: 300;
   line-height: 1.5;
   color: #c7e1b0;
+  overflow-wrap: break-word;
 }
 
 .servicos-card-text-bold {
@@ -270,6 +279,8 @@ strong {
   flex-direction: column;
   align-items: center;
   gap: 12px;
+  width: 100%;
+  min-width: 0;
 }
 
 .servicos-accordion {
@@ -277,6 +288,8 @@ strong {
   align-items: center;
   justify-content: space-between;
   width: 100%;
+  max-width: 100%;
+  min-width: 0;
   min-height: 52px;
   padding: 10px 18px;
   background-color: #b4c185;
@@ -289,6 +302,12 @@ strong {
   line-height: 1.25;
   text-align: left;
   cursor: pointer;
+  box-sizing: border-box;
+}
+
+.servicos-accordion-text {
+  min-width: 0;
+  overflow-wrap: break-word;
 }
 
 .servicos-chevron {
@@ -308,6 +327,8 @@ strong {
   align-items: center;
   justify-content: center;
   gap: 10px;
+  max-width: 100%;
+  min-width: 0;
   min-height: 52px;
   padding: 12px 18px;
   border-radius: 0;
@@ -319,10 +340,17 @@ strong {
   text-decoration: none;
   letter-spacing: 0.3px;
   cursor: pointer;
+  box-sizing: border-box;
+}
+
+.servicos-btn-label {
+  min-width: 0;
+  overflow-wrap: break-word;
 }
 
 .servicos-btn-primary {
   width: 270px;
+  max-width: 100%;
   background-color: #d83815;
   color: #ffffff;
   border: 1px solid #1b241d;
@@ -330,6 +358,7 @@ strong {
 
 .servicos-btn-portfolio {
   width: 270px;
+  max-width: 100%;
   min-height: 52px;
   padding: 8px 14px;
   background-color: transparent;
@@ -373,11 +402,13 @@ strong {
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 32px;
   align-items: stretch;
+  min-width: 0;
 }
 
 .servicos-card-actions-row .servicos-accordion,
 .servicos-card-actions-row .servicos-btn {
   width: 100%;
+  max-width: 100%;
 }
 
 .indico {
@@ -820,6 +851,14 @@ strong {
 
   .servicos {
     padding: 40px 0;
+    overflow-x: clip;
+  }
+
+  .servicos-container {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 16px;
+    box-sizing: border-box;
   }
 
   .servicos-title {
@@ -828,25 +867,72 @@ strong {
   }
 
   .servicos-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     gap: 18px;
+    min-width: 0;
+  }
+
+  .servicos-card {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    min-height: auto;
+    padding: 28px 20px;
+    box-sizing: border-box;
   }
 
   .servicos-card-wide {
     grid-column: span 1;
-  }
-
-  .servicos-card {
+    min-height: auto;
     padding: 28px 20px;
   }
 
-  .servicos-card-title {
+  .servicos-card-body,
+  .servicos-card-body-wide {
+    max-width: 100%;
+    min-width: 0;
+    margin-bottom: 24px;
+  }
+
+  .servicos-card-title,
+  .servicos-card-title-wide {
+    max-width: 100%;
     font-size: 24px;
   }
 
+  .servicos-card-actions {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .servicos-accordion {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .servicos-btn,
+  .servicos-btn-primary,
+  .servicos-btn-portfolio {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
   .servicos-card-actions-row {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     gap: 12px;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .servicos-card-actions-row .servicos-accordion,
+  .servicos-card-actions-row .servicos-btn {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
   }
 
   .indico {
